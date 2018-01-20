@@ -42,10 +42,10 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    historyApiFallback: true,
-    noInfo: true,
-    overlay: true
-  },
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000
+  },  
   performance: {
     hints: false
   },

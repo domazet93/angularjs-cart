@@ -1,6 +1,13 @@
 var path = require("path")
 var webpack = require("webpack")
 
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+  filename: "[name].css",
+  disable: process.env.NODE_ENV === "development"
+});
+
 module.exports = {
   entry: "./app/main.ts",
   output: {
@@ -13,11 +20,26 @@ module.exports = {
       test: /\.tsx?$/,
       use: "ts-loader",
       exclude: /node_modules/
+    },
+    {
+
+      test: /\.scss$/,
+      use: extractSass.extract({
+        use: [{
+          loader: "css-loader"
+        }, {
+          loader: "sass-loader"
+        }],
+        fallback: "style-loader"
+      })
     }]
   },
+  plugins: [
+    extractSass
+  ],
   resolve: {
-    alias: { },
-    extensions: [ ".tsx", ".ts", ".js" ]
+    alias: {},
+    extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
     historyApiFallback: true,

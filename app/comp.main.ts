@@ -1,5 +1,5 @@
-export const ShoppingCartComponent = {
+export const AppComponent = {
   bindings: {},
-  template: "<p>Hello world</p>",
+  template: "<products></products>",
   controller:() => {}
 }

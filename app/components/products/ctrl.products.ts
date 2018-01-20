@@ -6,4 +6,5 @@ export class ProductsController {
   $onInject = () => {
     console.log("ProdusController-->")
   }
+  
 }

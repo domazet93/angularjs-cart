@@ -9,7 +9,7 @@ import { AppComponent } from "./comp.main";
 import { ProductsComponent } from "./components/products/components";
 import { ShoppingCartComponent } from "./components/shopping-cart/components";
 
-angular.module('app', [])
+angular.module('app', [])  
   .controller('productsController', ProductsController)
   .component({
     "app": AppComponent,

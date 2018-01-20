@@ -32,13 +32,21 @@ module.exports = {
         }],
         fallback: "style-loader"
       })
+    },
+    {
+      test: /\.(html)$/,
+      use: {
+        loader: 'html-loader',
+        options: {
+          attrs: [':data-src']
+        }
+      }
     }]
   },
   plugins: [
     extractSass
   ],
   resolve: {
-    alias: {},
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {

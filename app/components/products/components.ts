@@ -1,5 +1,5 @@
 export const ProductsComponent = {
   bindings: {},
-  template: "<div class='products'>Products</div>",
+  template: require('./views/products.html'), 
   controller: () => { }
 }

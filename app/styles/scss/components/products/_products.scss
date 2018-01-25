@@ -1,3 +1,18 @@
+@import "../../base/variables";
 .products {
+  margin: 0 3em;
+  color: $text-color-primary;
+  .heading {
+    display: flex;
+    justify-content: center;
+    .box {
+      flex: 1;
+      text-align: center;
+    }
+  }
+}
 
+body {
+  margin: 0;
+  background: $body-bg-color;
 }

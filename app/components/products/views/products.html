@@ -1,5 +1,22 @@
 <div class="products">
-    Products
-</div>
+  <!-- Heading -->
+  <div class="heading">
+    <div class="box">
+      <h3>Description</h3>
+    </div>
+    <div class="box">
+      <h3>Quantity</h3>
+    </div>
+    <div class="box">
+      <h3>Price</h3>
+    </div>
+  </div>
 
+  <!-- Content -->
+  <div class="content">
+    <div ng-repeat="item in $ctrl.items">
+      <item item-details="item"></item>
+    </div>
+  </div>
+</div>
 <shopping-cart></shopping-cart>

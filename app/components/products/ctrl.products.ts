@@ -1,10 +1,20 @@
+import { ProductService } from "../../common/services/ser.products";
+
 export class ProductsController {
-  constructor() {
+
+  public items:any = [];
+
+  constructor(private productsService: ProductService ) {
     "ngInject"
   }
 
-  $onInject = () => {
-    console.log("ProdusController-->")
+  /**
+   * @method onInit
+   * @description on component creation lifecycle hook
+   * @memberof ProductsController
+   */
+  $onInit = () => {
+    this.items = this.productsService.getProducts();
   }
   
 }

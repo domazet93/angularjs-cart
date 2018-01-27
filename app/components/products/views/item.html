@@ -10,8 +10,11 @@
       <p>{{ $ctrl.itemDetails.price }}</p>
     </div>
     <div class="box">
-      <p>{{ $ctrl.itemDetails.$quantity }}</p>
+      <p>{{ $ctrl.itemDetails.$quantity || 0 }}</p>
       <button ng-click="$ctrl.addToBasket($ctrl.itemDetails)">+</button>
+    </div>
+    <div class="box" ng-if="$ctrl.showDiscountMsg">
+      Discont {{ $ctrl.discount | percentage }} {{ $ctrl.itemDetails.$discountPrice }}
     </div>
   </div>
 </div>

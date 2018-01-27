@@ -1,3 +1,17 @@
 <div class="item">
-    {{ $ctrl.data }}
+  <div class="heading">
+    <div class="box">
+      <p>{{ $ctrl.itemDetails.name }}</p>
+    </div>
+    <div class="box">
+      <p>{{ $ctrl.itemDetails.details }}</p>
+    </div>
+    <div class="box">
+      <p>{{ $ctrl.itemDetails.price }}</p>
+    </div>
+    <div class="box">
+      <p>{{ $ctrl.itemDetails.$quantity }}</p>
+      <button ng-click="$ctrl.addToBasket($ctrl.itemDetails)">+</button>
+    </div>
+  </div>
 </div>

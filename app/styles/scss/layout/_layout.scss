@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background: $body-bg-color;
+
+  .container {
+    display: flex;   
+    
+    .products {
+      flex: 2;
+    }
+    .sshopping-cart {
+      flex: 1;
+    }
+  }
+}

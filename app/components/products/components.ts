@@ -11,7 +11,8 @@ const ProductsComponent = {
 
 const ItemComponent = {
   bindings: {
-    itemDetails: "<"
+    itemDetails: "<",
+    addToBasket: "&"
   },
   template: require('./views/item.html'), 
   controller: ItemController,

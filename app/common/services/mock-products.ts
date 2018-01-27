@@ -1,6 +1,8 @@
 import { Item } from "./item";
+const uuidv4 = require('uuid/v4');
+
 
 export const Products: Item[] = [
-  { id: 1, name: "Sofa", price: "50€" },
-  { id: 1, name: "Blanket", price: "10€" }
+  { id: uuidv4(), name: "Sofa", details: "Lorem ipsum", price: "50€" },
+  { id: uuidv4(), name: "Blanket", details:"Lorem ipsum", price: "10€" }
 ];

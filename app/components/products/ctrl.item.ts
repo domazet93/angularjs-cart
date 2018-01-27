@@ -1,6 +1,7 @@
 export class ItemController {
 
   public itemDetails: any = {};
+  public addToBasket:(item:any) => any;
 
   constructor() {
     "ngInject"
@@ -12,7 +13,7 @@ export class ItemController {
    * @memberof ProductsController
    */
   $onInit = () => {
-    console.log("item-->", this.itemDetails)
+
   }
 
 }

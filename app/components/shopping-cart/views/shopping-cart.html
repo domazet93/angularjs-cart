@@ -5,4 +5,13 @@
       {{ item.name }} {{ item.$quantity }}
     </div>
   </div>
+  <div class="checkout">
+    <button ng-click="$ctrl.checkout()" 
+            class="btn btn--secondary"
+            ng-if="$ctrl.isEmptyBag">
+      Checkout
+    </button>
+    <p ng-if="!$ctrl.isEmptyBag">No items in bag</p>
+
+  </div>
 </div>

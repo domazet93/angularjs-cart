@@ -1,0 +1,16 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0;
+
+  &--primary {
+    background: $btn-color-primary;
+    color: $text-color-primary;
+  }
+
+  &--secondary {
+    background: $btn-color-secondary;
+    color: $text-color-ternary;
+  }
+}

@@ -3,7 +3,7 @@ import { ShoppingCartController } from "./ctrl.shopping-cart";
 
 export const ShoppingCartComponent = {
   bindings: {
-    shoppingBag: "="
+    shoppingBag: "<"
   },
   template: require('./views/shopping-cart.html'),
   controller: ShoppingCartController,

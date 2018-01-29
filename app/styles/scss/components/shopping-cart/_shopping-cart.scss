@@ -1,3 +1,7 @@
-.shopping-cart {
-  
+shopping-cart {
+  flex: 1;
+  background: $sidebar-bg-color;
+  height: 100%;
+  color: $text-color-secondary;
+  padding: 0 10px;
 }

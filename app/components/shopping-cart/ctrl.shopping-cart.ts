@@ -1,6 +1,7 @@
 export class ShoppingCartController {
 
-  private shoppingBag:any;
+  public shoppingBag:any;
+  public isEmptyBag:boolean;
 
   constructor(private $scope:any) {
     "ngInject"
@@ -16,6 +17,7 @@ export class ShoppingCartController {
       return this.shoppingBag
     }, (newVal:any, oldVal:any) => {
       console.log("Shopping bag updated-->", newVal)
+      console.log(this.shoppingBag.size)
     })
   }
 

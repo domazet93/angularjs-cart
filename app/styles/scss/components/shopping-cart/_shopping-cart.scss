@@ -2,6 +2,14 @@ shopping-cart {
   flex: 1;
   background: $sidebar-bg-color;
   height: 100%;
-  color: $text-color-secondary;
-  padding: 0 10px;
+  color: $text-color-primary;
+  padding: 0 20px;
+  .basket {
+    display: flex;
+    justify-content: space-between;
+    span {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
 }

@@ -6,20 +6,24 @@
     <div class="box">
       <p>{{ $ctrl.itemDetails.details }}</p>
     </div>
-    <div class="box">
-      <p>{{ $ctrl.itemDetails.price }}</p>
+    <div class="box" ng-class="{ 'special-offer': $ctrl.showDiscountMsg ===true }">
+      <div ng-if="$ctrl.showDiscountMsg" class="special-offer--title">
+        <span>Special Offer</span>
+      </div>
+      <p class="price">{{ $ctrl.itemDetails.price }}</p>
+      <div ng-if="$ctrl.showDiscountMsg">
+        <p class="special-offer--new-price">{{ $ctrl.itemDetails.$newPrice }}</p> 
+        <p>You save {{ $ctrl.itemDetails.price - $ctrl.itemDetails.$newPrice  }}</p>
+      </div>          
     </div>
     <div class="box">
       <span>{{ $ctrl.itemDetails.$quantity || 0 }}<span>
     </div>
     <div class="box">
       <button ng-click="$ctrl.addToBasket($ctrl.itemDetails)"
-              class="btn btn--primary">
+              class="btn btn--secondary">
         Add
       </button>
-    </div>
-    <div class="box" ng-if="$ctrl.showDiscountMsg">
-      Discont {{ $ctrl.discount | percentage }} {{ $ctrl.itemDetails.$discountPrice }}
     </div>
   </div>
 </div>

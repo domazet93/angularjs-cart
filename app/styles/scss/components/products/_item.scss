@@ -1,0 +1,16 @@
+.item {
+  .special-offer {
+    &--title {
+      border: 1px solid $btn-color-secondary;
+      color: $text-color-ternary;
+      padding: 5px 0;
+    }
+    &--new-price {
+      font-size: 1.5em;
+      color: $text-color-ternary;
+    }
+    .price {
+      text-decoration: line-through;
+    }
+  }
+} 

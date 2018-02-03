@@ -14,5 +14,17 @@ export const Products: Item[] = [
     name: "Blanket", 
     details:"Lorem ipsum",
     price: 40 
+  },
+  { 
+    id: uuidv4(), 
+    name: "Sofa", 
+    details: "Lorem ipsum", 
+    price: 120
+  },
+  { 
+    id: uuidv4(), 
+    name: "Blanket", 
+    details:"Lorem ipsum",
+    price: 40 
   }
 ];

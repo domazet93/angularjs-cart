@@ -11,7 +11,7 @@ export class ItemController {
     this.$scope.$watch(() => {
       return this.itemDetails.$quantity
     }, (newVal:number, oldVal:number) => {
-      if(newVal >=5) {
+      if(newVal === 5) {
         this.countDiscount(this.itemDetails);
       }
     });
@@ -25,7 +25,7 @@ export class ItemController {
    */
   countDiscount = (item:any) => {
     //let's say discount is 30% off for all items
-    item.$discountPrice = Math.round((item.$quantity * item.price) * 0.3);
+    item.$newPrice = Math.round(item.price - (item.price * 0.3));
     this.showDiscountMsg = true;  
   }
 }

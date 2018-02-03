@@ -21,12 +21,12 @@
 
     <!-- Content -->
     <div class="content">
-      <div ng-repeat="item in $ctrl.items">
+      <div ng-repeat="item in $ctrl.items" class="product-table">
         <item item-details="item" add-to-basket="$ctrl.addToBasket(item)"></item>
       </div>
     </div>
   </div>
-
+  
   <!-- Shopping Cart -->
   <shopping-cart shopping-bag="$ctrl.shoppingBag"></shopping-cart>
 </div>

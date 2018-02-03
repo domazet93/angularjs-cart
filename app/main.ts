@@ -16,7 +16,6 @@ import { ShoppingCartComponent } from "./components/shopping-cart/components";
 import { ProductService } from "./common/services/ser.products";
 
 // Filters
-import { MapToArray } from "./common/filters/fltr.mapToArray";
 import { Percentage } from "./common/filters/fltr.percentage";
 
 angular.module("app", [])  
@@ -27,7 +26,6 @@ angular.module("app", [])
   })  
   .service("productsService", ProductService)
   .filter({
-    "mapToArray": MapToArray,
     "percentage": Percentage
   })
   .component({

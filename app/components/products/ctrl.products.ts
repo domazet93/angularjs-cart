@@ -3,7 +3,7 @@ import { ProductService } from "../../common/services/ser.products";
 export class ProductsController {
 
   public items:any = [];
-  public shoppingBag:any = new Map();
+  public shoppingBag:any = [];
 
   constructor(private productsService: ProductService ) {
     "ngInject"
@@ -25,13 +25,13 @@ export class ProductsController {
    * @memberof ProductsController
    */
   addToBasket = (item:any) => {
-    let id = item.id;
-    if(this.shoppingBag.has(id)) {
-      let item = this.shoppingBag.get(id);
-      item.$quantity = item.$quantity + 1;
+    let id = item.id,
+        index = this.shoppingBag.indexOf(item);
+    if(index > -1) {
+      this.shoppingBag[index].$quantity = this.shoppingBag[index].$quantity + 1;
     } else {
       item.$quantity = 1;
-      this.shoppingBag.set(id, item);
+      this.shoppingBag.push(item);
     }
   }
   

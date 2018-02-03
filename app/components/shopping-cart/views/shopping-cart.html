@@ -1,17 +1,17 @@
 <div class="shopping-cart">
   <h3>Shopping Cart</h3>
-  <div class="basket">
-    <div ng-repeat="item in $ctrl.shoppingBag | mapToArray">
-      {{ item.name }} {{ item.$quantity }}
-    </div>
+  <div ng-repeat="item in $ctrl.shoppingBag" class="basket">
+    <span>{{ item.name }}</span>
+    <span>{{ item.$quantity }}</span> 
+    <span>{{ item.$newPrice ?  item.$newPrice : item.price }}</span>  
   </div>
+  <p>TOTAL: {{ $ctrl.getTotal() }}</p>
   <div class="checkout">
     <button ng-click="$ctrl.checkout()" 
             class="btn btn--secondary"
-            ng-if="$ctrl.isEmptyBag">
+            ng-if="$ctrl.shoppingBag.length">
       Checkout
     </button>
-    <p ng-if="!$ctrl.isEmptyBag">No items in bag</p>
-
+    <p ng-if="!$ctrl.shoppingBag.length">No items in bag</
   </div>
 </div>

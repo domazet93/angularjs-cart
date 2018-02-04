@@ -7,7 +7,6 @@ export class ItemController {
 
   //  Dependency Annotation to have ability to minify app 
   static $inject = ['$scope'];
-
   constructor(private $scope:any ) {
     "ngInject"
 

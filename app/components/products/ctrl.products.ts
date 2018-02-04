@@ -4,10 +4,12 @@ export class ProductsController {
 
   public items:any = [];
   public shoppingBag:any = [];
-
+  
+  //  Dependency Annotation to have ability to minify app 
+  static $inject = ['productsService'];
   constructor(private productsService: ProductService ) {
     "ngInject"
-  }
+  } 
 
   /**
    * @method onInit
@@ -27,6 +29,7 @@ export class ProductsController {
   addToBasket = (item:any) => {
     let id = item.id,
         index = this.shoppingBag.indexOf(item);
+        
     if(index > -1) {
       this.shoppingBag[index].$quantity = this.shoppingBag[index].$quantity + 1;
     } else {

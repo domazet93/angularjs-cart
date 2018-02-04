@@ -4,8 +4,7 @@ var webpack = require("webpack")
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-  filename: "[name].css",
-  disable: process.env.NODE_ENV === "development"
+  filename: "[name].css"
 });
 
 module.exports = {
@@ -14,7 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: "/dist/",
     filename: "build.js"
-  },
+  },  
   module: {
     rules: [{
       test: /\.tsx?$/,
@@ -50,7 +49,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "app"),
     compress: true,
     port: 9000
   },  

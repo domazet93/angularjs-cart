@@ -3,13 +3,12 @@ body {
   background: $body-bg-color;
   font-family: "Roboto", sans-serif;
   .container {
-    display: flex;  
-    
+    display: flex;      
     h3 {
-      font-weight: 300;
+      font-weight: bold;
     }
     p {
-      font-weight: 400;
+      font-weight: 300;
     }
   }
 }

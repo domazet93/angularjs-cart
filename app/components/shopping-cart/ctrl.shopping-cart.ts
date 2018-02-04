@@ -2,6 +2,8 @@ export class ShoppingCartController {
 
   public shoppingBag:any;
 
+  //  Dependency Annotation to have ability to minify app 
+  static $inject = ['$scope'];
   constructor(private $scope:any) {
     "ngInject"   
   }
@@ -23,7 +25,7 @@ export class ShoppingCartController {
   
   /**
    * @method getTotal
-   * @description calculate sum of item price
+   * @description calculate total sum of items in bag
    * @memberof ShoppingCartController
    */
   getTotal = () => {

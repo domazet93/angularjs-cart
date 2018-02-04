@@ -11,13 +11,13 @@ export const Products: Item[] = [
   },
   { 
     id: uuidv4(), 
-    name: "Blanket", 
+    name: "Table", 
     details:"Lorem ipsum",
     price: 40 
   },
   { 
     id: uuidv4(), 
-    name: "Sofa", 
+    name: "Bed", 
     details: "Lorem ipsum", 
     price: 120
   },

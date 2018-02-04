@@ -1,1 +1,25 @@
-Add Readme
+AngularJS simple shopping cart app using ES Classes powered with typings.
+
+## Start development
+
+    npm run dev
+
+## Build app
+
+    npm run build
+
+## Built With
+
+* [AngularJS 1.6.8](https://angularjs.org/) - The web framework used
+* [Webpack](https://webpack.js.org/) - Module bundler, resource, asset packager
+* [SASS](https://sass-lang.com/) - style sheet language
+* Writting with Typescript & ES6
+
+## Sys Dependencies
+
+* [NodeJS](https://github.com/nodesource/distributions#debmanual)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+

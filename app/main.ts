@@ -1,4 +1,3 @@
-import { module } from "angular";
 const angular = require('angular');
 const scss = require("./styles/scss/style.scss");
 
@@ -25,9 +24,7 @@ angular.module("app", [])
     "shoppingCartController": ShoppingCartController
   })  
   .service("productsService", ProductService)
-  .filter({
-    "percentage": Percentage
-  })
+  .filter("percentage", Percentage)
   .component({
     "app": AppComponent,
     "products": ProductsComponent,

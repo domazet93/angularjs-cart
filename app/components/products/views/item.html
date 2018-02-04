@@ -12,16 +12,15 @@
       </div>
       <p class="price">{{ $ctrl.itemDetails.price }}</p>
       <div ng-if="$ctrl.showDiscountMsg">
-        <p class="special-offer--new-price">{{ $ctrl.itemDetails.$newPrice }}</p> 
-        <p>You save {{ $ctrl.itemDetails.price - $ctrl.itemDetails.$newPrice  }}</p>
-      </div>          
+        <p class="special-offer--new-price">{{ $ctrl.itemDetails.$newPrice }}</p>
+        <p>You save {{ $ctrl.itemDetails.price - $ctrl.itemDetails.$newPrice }}</p>
+      </div>
     </div>
     <div class="box">
       <span>{{ $ctrl.itemDetails.$quantity || 0 }}<span>
     </div>
     <div class="box">
-      <button ng-click="$ctrl.addToBasket($ctrl.itemDetails)"
-              class="btn btn--secondary">
+      <button ng-click="$ctrl.addToBasket($ctrl.itemDetails)" class="btn btn--secondary">
         Add
       </button>
     </div>

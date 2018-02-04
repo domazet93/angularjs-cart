@@ -1,5 +1,10 @@
 AngularJS simple shopping cart app using ES Classes powered with typings.
 
+## Install Dependencies
+Navigate to a project folder
+
+    npm i
+
 ## Start development
 
     npm run dev
@@ -19,7 +24,4 @@ AngularJS simple shopping cart app using ES Classes powered with typings.
 
 * [NodeJS](https://github.com/nodesource/distributions#debmanual)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 

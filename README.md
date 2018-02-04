@@ -1,4 +1,4 @@
-AngularJS simple shopping cart app using ES Classes powered with typings.
+AngularJS simple shopping cart app using ES6 Classes powered with typings.
 
 ## Install Dependencies
 Navigate to a project folder

@@ -1,6 +1,9 @@
 <div class="item">
   <div class="heading">
     <div class="box">
+      <img class="img" ng-src="{{ $ctrl.itemDetails.url }}">
+    </div>
+    <div class="box">
       <p>{{ $ctrl.itemDetails.name }}</p>
     </div>
     <div class="box">
@@ -15,14 +18,9 @@
         <p class="special-offer--new-price">{{ $ctrl.itemDetails.$newPrice }}</p>
         <p>You save {{ $ctrl.itemDetails.price - $ctrl.itemDetails.$newPrice }}</p>
       </div>
-    </div>
+    </div>     
     <div class="box">
-      <span>{{ $ctrl.itemDetails.$quantity || 0 }}<span>
-    </div>
-    <div class="box">
-      <button ng-click="$ctrl.addToBasket($ctrl.itemDetails)" class="btn btn--secondary">
-        Add
-      </button>
+      <span ng-transclude></span>
     </div>
   </div>
 </div>

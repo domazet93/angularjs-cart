@@ -1,4 +1,7 @@
 .item {
+  .img {
+    max-width: 200px;
+  }
   .special-offer {
     &--title {
       border: 1px solid $btn-color-secondary;

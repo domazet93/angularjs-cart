@@ -3,6 +3,9 @@
     <!-- Heading -->
     <div class="heading">
       <div class="box">
+        <!-- No Heading For Item Image -->
+      </div>
+      <div class="box">
         <h3>Name</h3>
       </div>
       <div class="box">
@@ -14,19 +17,21 @@
       <div class="box">
         <h3>Quantity</h3>
       </div>
-      <div class="box">
-        <!-- No Heading For Add Button Column -->
-      </div>
     </div>
 
     <!-- Content -->
     <div class="content">
       <div ng-repeat="item in $ctrl.items" class="product-table">
-        <item item-details="item" add-to-basket="$ctrl.addToBasket(item)"></item>
+        <item item-details="item">
+          <button ng-click="$ctrl.removeFromBasket(item)" class="btn btn--secondary"> - </button>
+          <span>{{ item.$quantity || 0 }}<span>
+              <button ng-click="$ctrl.addToBasket(item)" class="btn btn--primary"> + </button>
+        </item>
       </div>
     </div>
   </div>
-
+  
   <!-- Shopping Cart -->
   <shopping-cart shopping-bag="$ctrl.shoppingBag"></shopping-cart>
+
 </div>

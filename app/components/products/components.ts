@@ -11,9 +11,9 @@ const ProductsComponent = {
 
 const ItemComponent = {
   bindings: {
-    itemDetails: "<",
-    addToBasket: "&"
+    itemDetails: "<"
   },
+  transclude: true,
   template: require('./views/item.html'), 
   controller: ItemController,
   controllerAs: "$ctrl"

@@ -11,11 +11,5 @@
       text-align: center;
     }
   }
-  .product-table {
-    &:nth-child(even) {
-      padding: 10px 0;
-      background: $table-bg-color;
-    }
-  }
 }
 

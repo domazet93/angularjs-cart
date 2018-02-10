@@ -3,8 +3,8 @@ export class ShoppingCartController {
   public shoppingBag:any;
 
   //  Dependency Annotation to have ability to minify app 
-  static $inject = ['$scope'];
-  constructor(private $scope:any) {
+  static $inject = ["$scope",  "$rootScope"];
+  constructor(private $scope:any, private $rootScope:any) {
     "ngInject"   
   }
 
@@ -38,6 +38,16 @@ export class ShoppingCartController {
       }
     });    
     return total;
+  }
+
+  /**
+   * @method emptyBag
+   * @description remove all items from shoppingBag, broadcast event to parent ctrl
+   * @memberof ShoppingCartController
+   */ 
+  emptyBag = () =>{
+    this.shoppingBag = [];
+    this.$rootScope.$broadcast("emptyBag", this.shoppingBag)
   }
 
 }

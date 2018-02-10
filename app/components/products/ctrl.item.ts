@@ -8,7 +8,7 @@ export class ItemController {
   public discount:number = .3;
 
   //  Dependency Annotation to have ability to minify app 
-  static $inject = ['$scope'];
+  static $inject = ["$scope"];
 
   constructor(public $scope:any) {
     "ngInject"

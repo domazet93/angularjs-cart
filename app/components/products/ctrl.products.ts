@@ -5,8 +5,8 @@ export class ProductsController {
   public shoppingBag:any = [];
 
   //  Dependency Annotation to have ability to minify app 
-  static $inject = ["productsService"];
-  constructor(protected productsService?: ProductService) {
+  static $inject = ["productsService", "$rootScope"];
+  constructor(private productsService: ProductService, private $rootScope:any) {
     "ngInject"
   } 
 
@@ -17,6 +17,11 @@ export class ProductsController {
    */
   $onInit = () => {
     this.items = this.productsService.getProducts();
+    this.$rootScope.$on("emptyBag", (event:any, data:any) => {
+      this.shoppingBag = data;
+      this.items.filter((item:any) => item.$quantity = 0);
+      
+    })
   }
   
   /**

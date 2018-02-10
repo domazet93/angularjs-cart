@@ -2,7 +2,7 @@ shopping-cart {
   flex: 1;
   background: $sidebar-bg-color;
   height: 100%;
-  color: $text-color-primary;
+  color: $text-color-secondary;
   padding: 0 20px;  
   .basket {
     display: flex;
@@ -10,6 +10,9 @@ shopping-cart {
     span {
       flex-grow: 1;
       flex-basis: 0;
+    }
+    &--item-name {
+      font-style: italic;
     }
   }
 }

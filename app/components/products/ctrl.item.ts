@@ -5,6 +5,7 @@ export class ItemController {
 
   public itemDetails: any = {};
   public showDiscountMsg:boolean = false;  
+  //let's say discount is 30% off for all items
   public discount:number = .3;
 
   //  Dependency Annotation to have ability to minify app 
@@ -37,7 +38,6 @@ export class ItemController {
    * @memberof ItemController
    */
   countDiscount = (item:any) => {
-    //let's say discount is 30% off for all items
     item.$newPrice = Math.round(item.price - (item.price * this.discount));
     this.showDiscountMsg = true;  
   }

@@ -21,10 +21,10 @@
 
     <!-- Content -->
     <div class="content">
-      <div ng-repeat="item in $ctrl.items" class="product-table">
+      <div ng-repeat="item in $ctrl.items" class="product-table spacer10">
         <item item-details="item">
           <button ng-click="$ctrl.removeFromBasket(item)" class="btn btn--secondary"> - </button>
-          <span>{{ item.$quantity || 0 }}<span>
+          <span class="spacerR10 spacerL10">{{ item.$quantity || 0 }}</span>
           <button ng-click="$ctrl.addToBasket(item)" class="btn btn--primary"> + </button>
         </item>
       </div>

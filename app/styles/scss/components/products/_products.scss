@@ -2,7 +2,7 @@
   flex: 2;
   margin: 0 3em;
   color: $text-color-secondary;
-  .heading {
+  .flex-content {
     display: flex;
     justify-content: center;
     .box {
@@ -11,7 +11,7 @@
       text-align: center;
     }
   }
-  .product-table {
+  &--table {
     &:nth-child(odd) {
       padding: 10px 0;
       background: $table-bg-color;
@@ -19,3 +19,17 @@
   }
 }
 
+@media only screen and (max-width: $screen-sm-max) {
+  .flex-content {
+    flex-direction: column;
+    &.hide {
+      display: none;
+    }
+  }
+  .products {
+    margin: 0;
+    &--table {
+      margin: 0 !important;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="products">
     <!-- Heading -->
-    <div class="heading">
+    <div class="flex-content hide">
       <div class="box">        
         <!-- No Heading For Item Image -->
       </div>
@@ -21,7 +21,7 @@
 
     <!-- Content -->
     <div class="content">
-      <div ng-repeat="item in $ctrl.items" class="product-table spacer10">
+      <div ng-repeat="item in $ctrl.items" class="products--table spacer10">
         <item item-details="item">
           <button ng-click="$ctrl.removeFromBasket(item)" class="btn btn--secondary"> - </button>
           <span class="spacerR10 spacerL10">{{ item.$quantity || 0 }}</span>

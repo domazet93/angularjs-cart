@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: "/dist/",
-    filename: "build.js"
+    filename: "build.js"    
   },  
   module: {
     rules: [{
@@ -40,6 +40,13 @@ module.exports = {
           attrs: [':data-src']
         }
       }
+    },
+    {
+      test: /\.(png|jpg|gif|svg)$/,
+      loader: "file-loader",
+      options: {
+        name: "[name].[ext]"
+      }
     }]
   },
   plugins: [
@@ -49,10 +56,10 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    contentBase: path.join(__dirname, "app"),
-    compress: true,
-    port: 9000
-  },  
+    historyApiFallback: true,
+    noInfo: true,
+    overlay: true
+  },
   performance: {
     hints: false
   },

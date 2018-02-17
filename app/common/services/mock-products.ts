@@ -13,14 +13,14 @@ export const Products: Item[] = [
   { 
     id: uuidv4(), 
     name: "Cake", 
-    url: require("../../resources/cake.jpg"),
+    url: require("../../resources/cake.png"),
     details:"Lorem ipsum",
     price: 40 
   },
   { 
     id: uuidv4(), 
     name: "Toys", 
-    url: require("../../resources/toys.jpg"),
+    url: require("../../resources/toys.png"),
     details: "Lorem ipsum", 
     price: 120
   }

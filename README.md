@@ -1,4 +1,5 @@
 AngularJS simple shopping cart app using ES6 Classes powered with typings.
+Webpack development and production enviroment sets-up.
 
 ## Install Dependencies
 Navigate to a project folder
